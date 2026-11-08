@@ -1,0 +1,12 @@
+{
+  "status": "awaiting_device_registration",
+  "version": "5.10.0",
+  "build": "21",
+  "manifest_url": null,
+  "requirements": [
+    "Physical iPhone running current iOS",
+    "iPhone UDID registered with Apple Developer",
+    "Ad Hoc signed IPA generated for registered device"
+  ],
+  "testflight_link": "https://testflight.apple.com/join/5HbeKTCZ"
+}
