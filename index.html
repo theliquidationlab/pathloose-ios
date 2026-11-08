@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10112a">
+  <meta name="description" content="Official Pathloose iPhone app testing and installation information from Liquidity Labs Studio.">
+  <title>Pathloose for iPhone | Liquidity Labs Studio</title>
+  <link rel="icon" type="image/png" href="./pathloose-icon.png">
+  <style>
+    :root{color-scheme:dark;--ink:#f4f5ff;--soft:#c2c7e3;--muted:#8d94bf;--line:rgba(190,201,255,.19);--bg:#0a0b1c;--purple:#8f66ff;--cyan:#44dbfc;--pink:#ff66e9;--radius:26px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:radial-gradient(ellipse 85% 38% at 50% 0%,#33205f 0%,#181130 44%,transparent 86%),var(--bg);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.4;background:radial-gradient(circle at 9% 67%,rgba(12,208,251,.08),transparent 28%),radial-gradient(circle at 88% 37%,rgba(252,84,220,.08),transparent 29%)}
+    a{color:inherit}
+    .wrap{width:min(1050px,calc(100% - 38px));margin:0 auto;position:relative;z-index:1}
+    .nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;letter-spacing:.02em}
+    .brand img{height:48px;width:48px;border-radius:13px;box-shadow:0 0 23px #8c5bff77}
+    .brand span{font-size:20px}
+    .navlinks{display:flex;align-items:center;gap:24px;color:var(--soft);font-size:14px;font-weight:650}
+    .navlinks a{text-decoration:none}
+    .navlinks a:hover{color:#fff}
+    .hero{text-align:center;padding:78px 0 40px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border:1px solid #6c62a2;background:#7563ff1b;border-radius:100px;font-size:12px;font-weight:750;color:#d3c7ff;letter-spacing:.1em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:#ffd46a;box-shadow:0 0 12px #ffd46a99}
+    h1{margin:22px 0 16px;font-size:clamp(43px,7vw,77px);line-height:1.04;letter-spacing:-.055em;font-weight:900}
+    .shine{background:linear-gradient(100deg,#fff 10%,#b3a1ff 41%,#59e4ff 64%,#f98bf2 91%);color:transparent;background-clip:text}
+    .lead{font-size:clamp(16px,2.3vw,20px);color:var(--soft);max-width:685px;margin:0 auto}
+    .heroicon{display:block;width:110px;height:110px;border-radius:27px;margin:36px auto 10px;box-shadow:0 0 80px #9650fc80,0 15px 40px #0007}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:40px 0}
+    .panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(135deg,rgba(42,33,83,.92),rgba(15,19,41,.96));box-shadow:0 20px 65px #0004;overflow:hidden;position:relative}
+    .panel:before{content:"";position:absolute;top:-100px;right:-100px;width:260px;height:260px;background:radial-gradient(circle,#ae74ff26,transparent 66%);pointer-events:none}
+    .panelbody{padding:31px 28px 29px}
+    .index{font-size:12px;font-weight:850;color:#aeb1e3;letter-spacing:.1em;text-transform:uppercase}
+    h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:12px 0}
+    h3{font-size:20px;margin:10px 0}
+    p{margin:10px 0;color:var(--soft)}
+    .status{display:inline-flex;align-items:center;gap:8px;margin:9px 0 13px;font-size:13px;font-weight:750;color:#ffe3a1}
+    .status:before{content:"";height:7px;width:7px;border-radius:50%;background:#ffca67}
+    .btn{border-radius:15px;display:flex;justify-content:center;align-items:center;gap:10px;padding:15px 18px;font-size:15px;font-weight:850;text-decoration:none;min-height:53px;cursor:pointer;transition:transform .15s,border-color .15s; border:1px solid transparent}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(110deg,#7a54fa,#ac5cfb 47%,#ed65c5);box-shadow:0 8px 26px #9057e64a;color:#fff}
+    .btn.secondary{border-color:#7779b0;background:#ffffff10;color:#eaf4ff}
+    .btn.off{cursor:default;pointer-events:none;opacity:.5;background:#2d3158;border-color:#535876;color:#c0c5da}
+    .btn.full{width:100%;margin-top:22px}
+    .fine{font-size:12px;color:var(--muted);margin:12px 0 0}
+    .steps{padding:0 0 0 20px;color:var(--soft);margin:20px 0}
+    .steps li{padding:0 0 13px 4px}
+    .steps li::marker{color:#c5a0ff;font-weight:800}
+    .notice{margin:34px 0;padding:23px 27px;border-radius:18px;background:rgba(69,60,121,.21);border:1px solid #7775b150;color:#ccd1ec}
+    .notice strong{color:#fff}
+    .section{padding:30px 0}
+    .sectionheading{font-size:29px;letter-spacing:-.035em;margin:0 0 10px}
+    .helpgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0}
+    .help{padding:20px;border:1px solid var(--line);border-radius:19px;background:#ffffff06}
+    .help .num{font-size:13px;font-weight:850;color:#87e8ff;letter-spacing:.07em}
+    .help strong{display:block;font-size:16px;margin-top:9px}
+    .help p{font-size:13px}
+    footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;border-top:1px solid var(--line);margin-top:40px;padding:28px 0 40px;color:var(--muted);font-size:13px}
+    footer a{color:#b9c3ff}
+    .smalllink{color:#a4e9ff;text-decoration:underline;text-underline-offset:4px}
+    #install-ready{display:none}
+    #install-ready.visible{display:block}
+    #pending-install.hidden{display:none}
+    @media(max-width:700px){.hero{padding-top:54px}.navlinks{gap:12px}.navlinks a:nth-child(2){display:none}.grid{grid-template-columns:1fr}.helpgrid{grid-template-columns:1fr}.panelbody{padding:26px 23px}.heroicon{width:98px;height:98px}.notice{padding:20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="./"><img src="./pathloose-icon.png" alt="Pathloose app icon"><span>Pathloose</span></a>
+      <div class="navlinks"><a href="#install">iPhone install</a><a href="#private">Private build</a><a href="https://theliquidationlab.github.io/pathloose-public-info/support.html">Support</a></div>
+    </nav>
+    <main>
+      <header class="hero">
+        <div class="eyebrow"><span class="dot"></span> iPhone testing portal</div>
+        <img class="heroicon" src="./pathloose-icon.png" alt="Pathloose">
+        <h1>Play Pathloose<br><span class="shine">on your iPhone.</span></h1>
+        <p class="lead">Install the real iOS game on an eligible physical iPhone to test levels, explore challenges, and capture the gameplay recording for Apple's App Review.</p>
+      </header>
+      <div class="grid" id="install">
+        <article class="panel">
+          <div class="panelbody">
+            <div class="index">Option 01 · Apple TestFlight</div>
+            <h2>Install through TestFlight</h2>
+            <div class="status">External beta approval pending</div>
+            <p>Apple is reviewing this beta. Once approved, testers can install the app using Apple's TestFlight application.</p>
+            <ol class="steps"><li>Open this page on the <strong>iPhone</strong>.</li><li>Install Apple's <strong>TestFlight</strong> app from the App Store.</li><li>Open the invitation and accept the Pathloose beta when available.</li></ol>
+            <a class="btn primary full" href="https://testflight.apple.com/join/5HbeKTCZ" rel="noopener">Open TestFlight invitation <span aria-hidden="true">↗</span></a>
+            <p class="fine">If Apple says the beta is not accepting testers, external beta approval is not complete. The invitation is not a direct IPA download.</p>
+          </div>
+        </article>
+        <article class="panel" id="private">
+          <div class="panelbody">
+            <div class="index">Option 02 · Private device installation</div>
+            <h2>Install a signed iPhone file</h2>
+            <div class="status" id="adhoc-status">Waiting for device registration</div>
+            <p>A specially signed <strong>.ipa</strong> can install directly from this website on a registered iPhone without waiting for public TestFlight access.</p>
+            <ol class="steps"><li>Find your iPhone's <strong>UDID</strong> (device identifier).</li><li>Send it privately to Liquidity Labs Studio to register the device with Apple Developer.</li><li>When the device-specific build is ready, reopen this page on that iPhone and use the installation link.</li></ol>
+            <div id="pending-install"><a class="btn secondary full" href="mailto:liquiditystudio2@gmail.com?subject=Pathloose%20iPhone%20private%20install%20request&body=Please%20register%20my%20iPhone%20for%20the%20Pathloose%20private%20beta.%0A%0AiPhone%20model%3A%0AiOS%20version%3A%0ADevice%20UDID%3A%0A" >Request a private iPhone build <span aria-hidden="true">↗</span></a><p class="fine">No installable Ad Hoc IPA is published yet. The file must be signed for your specific iPhone first.</p></div>
+            <div id="install-ready"><a id="ota-link" class="btn primary full" href="#">Install Pathloose on this iPhone <span aria-hidden="true">↗</span></a><p class="fine">Works only on iPhones whose UDIDs are included in the signed Ad Hoc provisioning profile. Open with Safari.</p></div>
+          </div>
+        </article>
+      </div>
+      <section class="section" aria-labelledby="find-udid">
+        <h2 class="sectionheading" id="find-udid">How to prepare the iPhone</h2>
+        <p>Use a real iPhone that runs the latest iOS for the recording Apple requested.</p>
+        <div class="helpgrid">
+          <div class="help"><span class="num">01 · Device</span><strong>Check the iOS version</strong><p>On the iPhone, open Settings → General → About. Use Settings → General → Software Update to install the latest available iOS.</p></div>
+          <div class="help"><span class="num">02 · Register</span><strong>Get the UDID privately</strong><p>Connect the iPhone to a trusted computer. On a Mac, select it in Finder and click the device details to reveal the UDID. On Windows, compatible Apple device tools or iTunes can display the identifier.</p></div>
+          <div class="help"><span class="num">03 · Record</span><strong>Capture real gameplay</strong><p>Start iPhone Screen Recording, launch Pathloose, open Play Level, solve part of a puzzle, and demonstrate Daily Race, Weekly Challenge, Collections, and Leaderboard.</p></div>
+        </div>
+        <div class="notice"><strong>Important:</strong> A website cannot install an ordinary App Store-signed IPA on a random iPhone. For direct installation, Apple requires an appropriately signed Ad Hoc build and that iPhone's registered UDID. Do not post the UDID publicly.</div>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Liquidity Labs Studio · Pathloose iPhone Testing</span>
+      <span><a href="https://theliquidationlab.github.io/pathloose-public-info/privacy.html">Privacy</a> · <a href="https://theliquidationlab.github.io/pathloose-public-info/support.html">Support</a> · <a href="mailto:liquiditystudio2@gmail.com">Contact</a></span>
+    </footer>
+  </div>
+  <script>
+    (async function(){
+      try {
+        var response = await fetch('./release.json', {cache:'no-store'});
+        if(!response.ok) return;
+        var release = await response.json();
+        if(release.status === 'ready' && typeof release.manifest_url === 'string' && /^https:\/\//.test(release.manifest_url)){
+          var link=document.getElementById('ota-link');
+          link.href='itms-services://?action=download-manifest&url='+encodeURIComponent(release.manifest_url);
+          document.getElementById('pending-install').classList.add('hidden');
+          document.getElementById('install-ready').classList.add('visible');
+          document.getElementById('adhoc-status').textContent='Signed private build available for registered devices';
+        }
+      }catch(e){/* The page remains useful even without release status. */}
+    }());
+  </script>
+</body>
+</html>
