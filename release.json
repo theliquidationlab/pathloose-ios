@@ -1,7 +1,7 @@
 {
   "status": "external_beta_approved",
   "version": "5.10.0",
-  "build": "21",
+  "build": "22",
   "manifest_url": null,
   "requirements": [
     "Physical iPhone running current iOS",
@@ -15,5 +15,6 @@
   "external_beta_state": "BETA_APPROVED",
   "testflight_approved": true,
   "install_url": "https://testflight.apple.com/join/5HbeKTCZ",
-  "installation_method": "Apple TestFlight"
+  "installation_method": "Apple TestFlight",
+  "latest_neon_renderer": "glossy pink/cyan rounded paths; correct all-direction arrowheads"
 }
