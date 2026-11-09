@@ -9,9 +9,9 @@
     "Ad Hoc signed IPA generated for registered device"
   ],
   "testflight_link": "https://testflight.apple.com/join/5HbeKTCZ",
-  "ipa_url": "https://github.com/theliquidationlab/pathloose-ios/releases/download/v5.10.0-iphone-local-signing/Pathloose-5.10.0-iPhone-For-Signing.ipa",
-  "ipa_sha256": "3850c3a70bd22bbabb3261e35b49de36c62174c7ba684b65e5ee1a2715b3c4b5",
-  "ipa_size_bytes": 11456465,
+  "ipa_url": "https://github.com/theliquidationlab/pathloose-ios/releases/download/v5.10.0-b22-iphone-local-signing/Pathloose-5.10.0-Neon-Arrows-iPhone-For-Signing.ipa",
+  "ipa_sha256": "d4891d37351dae488246e1c917c22b0fd552a7a13fc7b7b64d013d11af1a113f",
+  "ipa_size_bytes": 11457676,
   "external_beta_state": "BETA_APPROVED",
   "testflight_approved": true,
   "install_url": "https://testflight.apple.com/join/5HbeKTCZ",
