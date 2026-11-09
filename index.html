@@ -61,6 +61,13 @@
     footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;border-top:1px solid var(--line);margin-top:40px;padding:28px 0 40px;color:var(--muted);font-size:13px}
     footer a{color:#b9c3ff}
     .smalllink{color:#a4e9ff;text-decoration:underline;text-underline-offset:4px}
+    .status.approved{color:#8bf2d3}
+    .status.approved:before{background:#54e8b8;box-shadow:0 0 9px #54e8b888}
+    .hero-install{width:min(100%,440px);margin:26px auto 0}
+    .hero-install .fine{text-align:center}
+    .advanced{margin-top:23px;padding-top:16px;border-top:1px solid var(--line);color:var(--soft)}
+    .advanced summary{cursor:pointer;font-size:13px;color:#bcc3de;font-weight:750}
+    .advanced p{font-size:13px}
     #install-ready{display:none}
     #install-ready.visible{display:block}
     #pending-install.hidden{display:none}
@@ -72,44 +79,52 @@
   <div class="wrap">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="./"><img src="./pathloose-icon.png" alt="Pathloose app icon"><span>Pathloose</span></a>
-      <div class="navlinks"><a href="#install">iPhone install</a><a href="#private">Private build</a><a href="https://theliquidationlab.github.io/pathloose-public-info/support.html">Support</a></div>
+      <div class="navlinks"><a href="#install">iPhone install</a><a href="#private">Record gameplay</a><a href="https://theliquidationlab.github.io/pathloose-public-info/support.html">Support</a></div>
     </nav>
     <main>
       <header class="hero">
-        <div class="eyebrow"><span class="dot"></span> iPhone testing portal</div>
+        <div class="eyebrow"><span class="dot"></span> iPhone beta available now</div>
         <img class="heroicon" src="./pathloose-icon.png" alt="Pathloose">
         <h1>Play Pathloose<br><span class="shine">on your iPhone.</span></h1>
-        <p class="lead">Install the real iOS game on an eligible physical iPhone to test levels, explore challenges, and capture the gameplay recording for Apple's App Review.</p>
+        <p class="lead">Get the full native iOS game through Apple-approved TestFlight. Play real levels, explore challenges, and record the gameplay video Apple requested on an actual iPhone.</p>
       </header>
+      <div class="hero-install"><a class="btn primary full" href="https://testflight.apple.com/join/5HbeKTCZ" rel="noopener noreferrer">Get Pathloose on iPhone — Install Now <span aria-hidden="true">↗</span></a><p class="fine">Official TestFlight beta approved · iPhone required · Free to play</p></div>
       <div class="grid" id="install">
         <article class="panel">
           <div class="panelbody">
-            <div class="index">Option 01 · Apple TestFlight</div>
-            <h2>Install through TestFlight</h2>
-            <div class="status">External beta approval pending</div>
-            <p>Apple is reviewing this beta. Once approved, testers can install the app using Apple's TestFlight application.</p>
-            <ol class="steps"><li>Open this page on the <strong>iPhone</strong>.</li><li>Install Apple's <strong>TestFlight</strong> app from the App Store.</li><li>Open the invitation and accept the Pathloose beta when available.</li></ol>
-            <a class="btn primary full" href="https://testflight.apple.com/join/5HbeKTCZ" rel="noopener">Open TestFlight invitation <span aria-hidden="true">↗</span></a>
-            <p class="fine">If Apple says the beta is not accepting testers, external beta approval is not complete. The invitation is not a direct IPA download.</p>
+            <div class="index">Official iPhone beta · Available now</div>
+            <h2>Install the real Pathloose game</h2>
+            <div class="status approved">Apple approved external TestFlight testing</div>
+            <p><strong>Pathloose 5.10.0 · iOS build 21 is ready for iPhone testers.</strong> This installs the actual native game, not a web demo or simulator video.</p>
+            <a class="btn primary full" href="https://testflight.apple.com/join/5HbeKTCZ" rel="noopener noreferrer">Install Pathloose on iPhone <span aria-hidden="true">↗</span></a>
+            <ol class="steps">
+              <li>Open this website using <strong>Safari on the iPhone</strong> that will play Pathloose.</li>
+              <li>If TestFlight is not installed, <a class="smalllink" href="https://apps.apple.com/app/testflight/id899247664">install Apple's free TestFlight app</a> and return here.</li>
+              <li>Tap <strong>Install Pathloose on iPhone</strong> above, then choose <strong>Accept → Install</strong> in TestFlight.</li>
+              <li>Open Pathloose from the iPhone Home Screen and play.</li>
+            </ol>
+            <p class="fine">No Mac, Windows PC, UDID, developer tools, unsigned IPA or App Store release approval needed. You only need Apple's TestFlight app and the invitation link. Testing access is separate from the rejected public App Store submission.</p>
           </div>
         </article>
         <article class="panel" id="private">
           <div class="panelbody">
-            <div class="index">Option 02 · Actual iPhone app file</div>
-            <h2>Download Pathloose for iPhone</h2>
-            <div class="status" id="adhoc-status">Real IPA available · Local Apple ID signing required</div>
-            <p><strong>The full Pathloose 5.10.0 iPhone game is available below as an .ipa file.</strong> This is the native iPhone game, not a browser version, image, or simulator recording.</p>
-            <a class="btn primary full" href="https://github.com/theliquidationlab/pathloose-ios/releases/download/v5.10.0-iphone-local-signing/Pathloose-5.10.0-iPhone-For-Signing.ipa" download="Pathloose-5.10.0-iPhone-For-Signing.ipa">Download Pathloose iPhone Game (.ipa) <span aria-hidden="true">↓</span></a>
-            <p class="fine">Important: iOS cannot install this unsigned IPA by simply tapping the downloaded file. It must first be signed with an Apple ID for the iPhone using AltStore Classic and AltServer on a Mac or Windows PC.</p>
+            <div class="index">Record gameplay for Apple</div>
+            <h2>Test on a physical iPhone</h2>
+            <div class="status approved">Ready for real-device recording</div>
+            <p>Apple requested video captured on an actual iPhone running the latest iOS—not simulator footage.</p>
             <ol class="steps">
-              <li>On your friend's iPhone, download the <strong>Pathloose IPA</strong> above and save it in Files.</li>
-              <li>On her Mac or Windows computer, install <strong>AltServer</strong> and use it to install <strong>AltStore Classic</strong> on her iPhone.</li>
-              <li>In AltStore Classic on the iPhone, open <strong>My Apps → +</strong>, choose the downloaded Pathloose IPA, and sign in to her own Apple Account when prompted.</li>
-              <li>Once installed, open Pathloose from the iPhone home screen and make the physical-device gameplay recording Apple requested.</li>
+              <li>Update the iPhone to the latest supported iOS.</li>
+              <li>Use the TestFlight installation above and launch Pathloose from the Home Screen.</li>
+              <li>Start iPhone <strong>Screen Recording</strong>, then show Play Level, actual puzzle gameplay, Daily Race, Weekly Challenge, Collections, and Leaderboard.</li>
+              <li>Save the original recording and send it to Liquidity Labs Studio for Apple's App Review.</li>
             </ol>
-            <a class="btn secondary full" href="https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows" rel="noopener noreferrer">Official AltStore Windows setup guide <span aria-hidden="true">↗</span></a>
-            <p class="fine">For Mac: <a class="smalllink" href="https://faq.altstore.io/altstore-classic/how-to-install-altstore-macos" rel="noopener noreferrer">official setup guide</a>. No jailbreak is required. Free personal signing may require refreshing the app after seven days.</p>
-            <p class="fine">A one-tap direct Safari installer instead requires an Ad Hoc profile containing this iPhone's UDID. <a class="smalllink" href="mailto:liquiditystudio2@gmail.com?subject=Pathloose%20direct%20iPhone%20install%20registration">Request that route</a>.</p>
+            <a class="btn secondary full" href="mailto:liquiditystudio2@gmail.com?subject=Pathloose%20real%20iPhone%20gameplay%20recording">Send your recording <span aria-hidden="true">↗</span></a>
+            <details class="advanced">
+              <summary>Advanced: Download raw iPhone IPA file</summary>
+              <p>The full Pathloose IPA is also available for computer-assisted local signing. <strong>Downloading this unsigned IPA alone will not install it on iPhone.</strong> If TestFlight works, do not use this method.</p>
+              <a class="btn secondary full" href="https://github.com/theliquidationlab/pathloose-ios/releases/download/v5.10.0-iphone-local-signing/Pathloose-5.10.0-iPhone-For-Signing.ipa">Download IPA for local signing (advanced)</a>
+              <p class="fine">Local signing needs AltStore Classic/AltServer and a Mac or Windows PC. A one-tap over-the-air Ad Hoc install requires Apple registration for that iPhone's UDID.</p>
+            </details>
           </div>
         </article>
       </div>
@@ -118,10 +133,10 @@
         <p>Use a real iPhone that runs the latest iOS for the recording Apple requested.</p>
         <div class="helpgrid">
           <div class="help"><span class="num">01 · Device</span><strong>Check the iOS version</strong><p>On the iPhone, open Settings → General → About. Use Settings → General → Software Update to install the latest available iOS.</p></div>
-          <div class="help"><span class="num">02 · Register</span><strong>Get the UDID privately</strong><p>Connect the iPhone to a trusted computer. On a Mac, select it in Finder and click the device details to reveal the UDID. On Windows, compatible Apple device tools or iTunes can display the identifier.</p></div>
+          <div class="help"><span class="num">02 · Register</span><strong>Install through TestFlight</strong><p>Download the free TestFlight app from the iPhone App Store, return to the download button, then tap Accept and Install.</p></div>
           <div class="help"><span class="num">03 · Record</span><strong>Capture real gameplay</strong><p>Start iPhone Screen Recording, launch Pathloose, open Play Level, solve part of a puzzle, and demonstrate Daily Race, Weekly Challenge, Collections, and Leaderboard.</p></div>
         </div>
-        <div class="notice"><strong>Important:</strong> A website cannot install an ordinary App Store-signed IPA on a random iPhone. For direct installation, Apple requires an appropriately signed Ad Hoc build and that iPhone's registered UDID. Do not post the UDID publicly.</div>
+        <div class="notice"><strong>Important:</strong> The approved TestFlight invitation installs Pathloose using Apple's official process without requiring a registered UDID. The advanced unsigned IPA is not a tap-to-install iPhone package.</div>
       </section>
     </main>
     <footer>
